@@ -48,36 +48,49 @@ my profile
             <div class="ten wide column">
                 <table class="ui table">
                     <tbody>
-                    <tr>
-                        <td>username</td>
-                        <td>{{profile.user}}</td>
-                    </tr>
-                    <tr>
-                        <td>first name</td>
-                        <td>{{profile.first_name}}</td>
-                    </tr>
-                    <tr>
-                        <td>last name</td>
-                        <td>{{profile.last_name}}</td>
-                    </tr>
-                    <tr>
-                        <td>Bio</td>
-                        <td>{{profile.bio}}</td>
-                    </tr>
-                    <tr>
-                        <td>Number of friends</td>
-                        <td>{{profile.get_friends_no}}</td>
-                    </tr>
-                    <tr>
-                        <td>Friends</td>
-                        <td>
-                            <ul>
-                                {% for friend in profile.get_friends %}
-                                <li>{{ friend }}</li>
-                                {% endfor %}
-                            </ul>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>username</td>
+                            <td>{{profile.user}}</td>
+                        </tr>
+                        <tr>
+                            <td>first name</td>
+                            <td>{{profile.first_name}}</td>
+                        </tr>
+                        <tr>
+                            <td>last name</td>
+                            <td>{{profile.last_name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Bio</td>
+                            <td>{{profile.bio}}</td>
+                        </tr>
+                        <tr>
+                            <td>Number of friends</td>
+                            <td>{{profile.get_friends_no}}</td>
+                        </tr>
+                        <tr>
+                            <td>Friends</td>
+                            <td>
+                                <ul>
+                                    {% for friend in profile.get_friends %}
+                                    <li>{{ friend }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Number of posts</td>
+                            <td>{{profile.get_posts_no}}</td>
+                        </tr>
+                        <tr>
+                            <td>Number of likes given</td>
+                            <td>{{profile.get_likes_given_no}}</td>
+                        </tr>
+                        <tr>
+                            <td>Number of likes received</td>
+                            <td>{{profile.get_likes_recieved_no}}</td>
+                        </tr>
+
                     </tbody>
                 </table>
             </div>
