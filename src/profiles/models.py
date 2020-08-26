@@ -16,7 +16,7 @@ class ProfileManager(models.Manager):
         accepted = set([])
         for rel in qs:
             if rel.status == 'accepted':
-                accepted.add(rel.receiver) 
+                accepted.add(rel.receiver)  
                 accepted.add(rel.sender)
 
         print(accepted)
